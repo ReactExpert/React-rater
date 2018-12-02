@@ -1,0 +1,72 @@
+$gold: #fc6;
+$react-rater-hover: lighten($gold, 10%);
+$react-rater-active: $gold;
+
+@import "../src/react-rater";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  font: 20px/1.8 'Helvetica Nenu', Helvetica, sans-serif;
+  background-color: #FBAB7E;
+  background-image: -webkit-linear-gradient(45deg, #FBAB7E 0%, #F7CE68 100%);
+  background-image: -moz-linear-gradient(45deg, #FBAB7E 0%, #F7CE68 100%);
+  background-image: -o-linear-gradient(45deg, #FBAB7E 0%, #F7CE68 100%);
+  background-image: linear-gradient(45deg, #FBAB7E 0%, #F7CE68 100%);
+  padding: 5vh 10vw;
+  box-sizing: content-box;
+}
+
+#app {
+  padding: 5vh 5vw;
+  background: #fff;
+  box-shadow: 1rem 1rem rgba(0,0,0,.1);
+}
+
+#app > main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+h3 {
+  color: #494949;
+}
+
+.AnimatedRater {
+  flex: 1 0 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  section {
+    &:not(:first-child) {
+      font-size: 1.5rem;
+      flex: 1 1 50%;
+      .react-rater {
+        font-size: 2rem;
+      }
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      height: 18rem;
+    }
+  }
+}
+
+code {
+  background: #fff;
+  color: #494949;
+  font-weight: bold;
+  display: block;
+  min-width: 15rem;
+}
